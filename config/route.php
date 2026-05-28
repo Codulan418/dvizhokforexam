@@ -29,4 +29,6 @@ return [
     ['GET', '/admin/reviews', 'AdminReviewsController@adminReviews'],
     ['POST', '/admin/reviews/approve/{id}', 'AdminReviewsController@approve'],
     ['POST', '/admin/reviews/delete/{id}', 'AdminReviewsController@delete'],
+    ['GET', '*', 'DYNAMIC_MODULES_FALLBACK'],
+    ['POST', '*', 'DYNAMIC_MODULES_FALLBACK'],
 ];
