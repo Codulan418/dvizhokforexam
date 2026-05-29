@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/doc.css">
+</head>
+<body>
+    <div class="container-detail">
+        <div class="right-column">
+            <h4>ДОКУМЕНТАЦИЯ</h4>
+            <button class="card-detail-doc active" type="button" data-tab="web">
+                <span>&lt;/&gt;</span>
+                <p class="big">Web-приложение</p>
+                <p class="small">React + Node.js + PostgreSQL</p>
+            </button>
+            <button class="card-detail-doc" type="button" data-tab="android">
+                <span>A</span>
+                <p class="big">Android-приложение</p>
+                <p class="small">Flutter + общий REST API</p>
+            </button>
+            <button class="card-detail-doc" type="button" data-tab="ui">
+                <span>IU</span>
+                <p class="big">Интерфейс и дизайн</p>
+                <p class="small">Общая дизайн система</p>
+            </button>
+            <button class="card-detail-doc" type="button" data-tab="help">
+                <span>?</span>
+                <p class="big">Полезные источники</p>
+                <p class="small">Ссылки, ИИ и помощь</p>
+            </button>
+        </div>
+
+        <div class="left-column">
+            <div id="web" class="tab-content">
+
+                <h3>Единое руководство по разработке веб-сервера, Android-приложения и согласованной дизайн-системы продукта.</h3>
+                <div class="tech-tags">
+                    <span>React</span>
+                    <span>Flutter</span>
+                    <span>Node.js</span>
+                    <span>PostgreSQL</span>
+                    <span>REST API</span>
+                </div>
+                <div class="web-app">
+                    <p class="orange">WEB-ПРИЛОЖЕНИЕ</p>
+                    <h4>Разработка веб-прилоения</h4>
+                    <p>React + Vite для frontend, Node.js + Express для API и PostgreSQL с Prisma для хранения данных.</p>
+                </div>
+                
+                <div class="web-app">
+                    <p class="technical">Техническое задание для студентов</p>
+                    <p>Web-приложение на React + Node.js + PostgreSQL</p>
+                    <p>Проект: сервис поиска строительных специалистов</p>
+                </div>
+
+                <div class="web-app">
+                    <h2 class="orange">1.</h2> <p>Что нужно разработать</p>
+                    <p>Нужно создать веб-приложение, в котором:</p>
+                    <div class="step-card">
+                        <ul>
+                            <li>заказчик размещает заказ на строительные работы</li>
+                            <li>специалист создаёт новую анкету</li>
+                            <li>специалист ищет подходящий заказ</li>
+                            <li>специалист отправляет отклик</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- вкладка 2 -->
+            <div id="android" class="tab-content">
+                <h3>Документация по мобильному приложению</h3>
+                <div class="web-app">
+                    <p class="orange">ANDROID-ПРИЛОЖЕНИЕ</p>
+                    <h4>Разработка на Flutter</h4>
+                    <p>Здесь будет текст про мобильное приложение...</p>
+                </div>
+            </div>
+
+            <!-- вкладка 3 -->
+            <div id="ui" class="tab-content">
+                <h3>Дизайн-система проекта</h3>
+                <p>Здесь будет текст про дизайн...</p>
+            </div>
+
+            <!-- вкладка 4 -->
+            <div id="help" class="tab-content">
+                <h3>Полезные ссылки</h3>
+                <p>Здесь будут ссылки...</p>
+            </div>
+        </div>
+    </div>
+
+<script src="assets/js/doc.js"></script>    
+</body>
+</html>
