@@ -1,8 +1,8 @@
-<?
+<?php
     $host = 'localhost';
     $dbname = 'avtoservis';
-    $username = 'mysql';
-    $password = 'mysql';
+    $username = 'root';
+    $password = '';
 
 try {
     $pdo = new PDO("mysql:host=$host; dbname=$dbname; charset=utf8", $username, $password);

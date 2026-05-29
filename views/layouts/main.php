@@ -7,9 +7,11 @@
     
     <!--CSS-->
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/doc.css">
 
     <!--JS-->
     <script src="/assets/js/script.js" defer></script>
+    <script src="/assets/js/doc.js" defer></script>
 
     <?if (!empty($js)){?>
     <script src="/assets/js/<?= htmlspecialchars($js) ?>" defer></script>
