@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #060F14;
+}
+
+/* Контейнер: задаем сетку из 6 колонок и центрируем на странице */
+.container-doc {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto; 
+    font-family: Arial, sans-serif;
+}
+
+/* Оформление карточки-ссылки */
+.card-doc {
+    display: block; /* Чтобы ссылка вела себя как блок */
+    box-sizing: border-box; /* Замена глобальному сбросу */
+    background-color: #161b22; /* Темно-синий фон карточки */
+    border-radius: 8px;
+    padding: 20px 15px;
+    text-align: center;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    color: #e6edf3; /* Белый цвет текста */
+    transition: background-color 0.2s ease; /* Плавность при наведении */
+}
+
+/* Эффект при наведении мышкой */
+.card-doc:hover {
+    background-color: #21262d;
+}
+
+/* Сбрасываем стандартные отступы браузера у абзацев (замена *) */
+.card-doc p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Верхняя цифра (1) */
+.card-doc span:first-child {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+/* Название задачи "Сверстать страницы" */
+.card-doc p:first-of-type {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+/* Текст "Статус:" */
+.card-doc p:last-of-type {
+    display: inline-block; /* Ставим в одну строку с плашкой */
+    font-size: 12px;
+    color: #8b949e; /* Сероватый текст */
+}
+
+/* Плашка со статусом "в работе" */
+.status-doc {
+    display: inline-block;
+    background-color: #555b44; /* Оливковый фон */
+    color: #d2d6ba; /* Светло-зеленый текст */
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 12px; /* Овальная форма */
+    margin-left: 5px; /* Отступ от слова "Статус:" */
+}
+
+
+/* MARK: детальная */
+.container-detail {
+    background-color: #060F14;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+}
+
+/* Боковое меню */
+.right-column {
+    background-color: #0f1a20;
+    padding: 45px 28px;
+    min-width: 250px;
+}
+
+.right-column h4 {
+    margin: 0 0 22px;
+    color: #7f8b91;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+/* Карточки в меню */
+.card-detail-doc {
+    width: 100%;
+    min-height: 86px;
+    margin-bottom: 18px;
+    padding: 16px 18px;
+
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #cfd8dc;
+
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    align-items: center;
+    column-gap: 14px;
+
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-detail-doc:hover {
+    background-color: #17262e;
+}
+
+.card-detail-doc.active {
+    background-color: #7a430f;
+}
+
+.card-detail-doc span {
+    font-size: 18px;
+    color: #aeb8bd;
+    grid-row: span 2; 
+    text-align: center;
+}
+
+
+.card-detail-doc .big {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.2;
+    align-self: flex-end;
+}
+
+.card-detail-doc .small {
+    margin: 6px 0 0;
+    font-size: 12px;
+    color: #8d9aa0;
+    line-height: 1.2;
+    align-self: flex-start;
+}
+
+.card-detail-doc.active span,
+.card-detail-doc.active .big {
+    color: #ff9800;
+}
+
+.card-detail-doc.active .small {
+    color: #ffb84d;
+}
+
+/* Основной контент */
+.left-column {
+    max-width: 1000px;
+    padding: 45px 70px;
+}
+
+.left-column h3 {
+    margin: 0 0 16px;
+    color: #8f9ca1;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+/* Теги */
+.tech-tags {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 34px;
+}
+
+.tech-tags span {
+    padding: 4px 10px;
+    border: 1px solid #4d5a61;
+    border-radius: 15px;
+    color: #9aa7ad;
+    font-size: 11px;
+}
+
+/* Большие карточки контента */
+.web-app {
+    background-color: #101b20;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 28px;
+}
+
+.web-app .orange,
+.orange {
+    color: #ff9800;
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.web-app h4 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.web-app p {
+    margin: 7px 0;
+    color: #87949a;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.web-app .technical {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.web-app h2.orange + p,
+.web-app h2.orange + p + p {
+    color: #ffffff;
+}
+
+/* Вторая карточка с оранжевой линией слева */
+.left-column .web-app:nth-of-type(3) {
+    border-left: 2px solid #ff9800;
+}
+
+/* Заголовок 1. Что нужно разработать */
+.web-app h2.orange {
+    display: inline;
+    margin: 0;
+    font-size: 18px;
+}
+
+.web-app h2.orange + p {
+    display: inline;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* Список */
+.step-card {
+    margin-top: 14px;
+}
+
+.step-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.step-card li {
+    background-color: #172a35;
+    color: #7f8c92;
+    padding: 7px 10px;
+    margin-bottom: 7px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+.step-card li::before {
+    content: "•";
+    color: #ff9800;
+    margin-right: 7px;
+}
+
+/* Скрываем все вкладки контента по умолчанию */
+.tab-content {
+    display: none;
+}
+
+/* Показываем только ту вкладку, у которой есть класс active */
+.tab-content.active {
+    display: block;
+}
