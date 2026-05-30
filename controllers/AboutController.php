@@ -7,10 +7,11 @@ class AboutController extends Controller
     {
         global $connect;
 
-        $stmt = $connect->prepare("SELECT * FROM about");
-        $stmt->execute();
-        $service = $stmt->fetchAll();
+        // mysqli
+        $result = mysqli_query($connect, "SELECT * FROM about");
+        $service = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+        // PDO
         $stmt = $connect->prepare("SELECT * FROM staff");
         $stmt->execute();
         $workes = $stmt->fetchAll();
@@ -19,6 +20,13 @@ class AboutController extends Controller
         $stmt->execute();
         $advantages = $stmt->fetchAll();
 
-        $this->render('about', ['title' => 'о нас','service'=>$service,'workes'=>$workes,'advantages'=>$advantages]);
+        $this->render('about', [
+            // название страницы отображаемое в браузере
+            'title' => 'о нас',
+            // передаём данные выборки из бд
+            'service'=>$service,
+            'workes'=>$workes,
+            'advantages'=>$advantages
+        ]);
     }
 }

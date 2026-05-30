@@ -1,18 +1,28 @@
 <?php session_start();?>
+<!-- ОБРАТИТЕ ВНИМАНИЕ!  
+ Данный файл является шаблоном, при редактировании не удаляйте следующие части кода:
+    <Title> 
+    js рендера
+    $content
+-->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--НЕ УДАЛЯТЬ, прописывается название странички-->
     <title><?= htmlspecialchars($title ?? 'Нет названия') ?></title>
     
     <!--CSS-->
     <link rel="stylesheet" href="/assets/css/style.css">
 
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+
     <!--JS общий для всех страниц-->
     <script src="/assets/js/script.js" defer></script>
 
-    <!-- js -->
+    <!-- js рендера (подставляется отдельно для каждой страницы)-->
     <?if (!empty($js)){
         $jsArr = explode(", ", $js);
         foreach($jsArr as $jsItem){?>
@@ -25,7 +35,7 @@
     
     <!---------------------------------------------------Шапка--------------------------------------------------->
     <header>
-    <!-- прописываем здесь хедер -->
+    <!-- прописываем здесь свой хедер -->
         <div class="mini-header">
             <a href="/">Главная</a>
             <a href="/about">О нас</a>
@@ -35,7 +45,7 @@
     
     <!---------------------------------------------------Основа--------------------------------------------------->
     <main>
-        <!-- сюда подключится представление изз папки view -->
+        <!-- сюда подключится представление из папки view, НЕ УДАЛЯТЬ-->
         <?= $content ?>
     </main>
 
@@ -44,5 +54,8 @@
     <footer>
     <!-- тут разместить подвал -->
     </footer>
+
+    <!--Bootstrap JS-->
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
