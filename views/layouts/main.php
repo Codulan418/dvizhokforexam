@@ -19,6 +19,9 @@
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="/assets/fontAwesome/css/all.css">
+
     <!--JS общий для всех страниц-->
     <script src="/assets/js/script.js" defer></script>
 

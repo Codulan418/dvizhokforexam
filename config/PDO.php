@@ -1,6 +1,6 @@
 <?
     $host = 'localhost';
-    $dbname = 'avtoservis';
+    $dbname = '';
     $username = 'mysql';
     $password = 'mysql';
 
