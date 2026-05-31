@@ -7,9 +7,9 @@ class Router
     {
         foreach ($routesList as $route) {
             $this->routes[] = [
-                'method'  => $route[0],
-                'path'    => $route[1],
-                'handler' => $route[2]
+                'path'    => $route[0],
+                'handler' => $route[1],
+                'method'  => $route[2] ?? 'GET',
             ];
         }
     }
