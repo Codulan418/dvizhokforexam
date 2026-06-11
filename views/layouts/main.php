@@ -12,15 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--НЕ УДАЛЯТЬ, прописывается название странички-->
     <title><?= htmlspecialchars($title ?? 'Нет названия') ?></title>
-    
-    <!--CSS-->
-    <link rel="stylesheet" href="/assets/css/style.css">
 
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 
     <!--FontAwesome-->
     <link rel="stylesheet" href="/assets/fontAwesome/css/all.css">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/assets/css/style.css">
 
     <!--JS общий для всех страниц-->
     <script src="/assets/js/script.js" defer></script>
